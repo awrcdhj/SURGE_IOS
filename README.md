@@ -1,1 +1,7 @@
-Surge规则节点配置保存
+🇭🇰 香港 ➤ 三网优选线路 ➤ x1 = vmess, 13.70.62.248, 80, username=3ddf3b85-e7c3-3940-9bff-c31d26066d9b, ws=true, ws-path=/, sni=mp.weixin.qq.com, ws-headers=Host:"mp.weixin.qq.com", skip-cert-verify=true, tfo=true
+🇭🇰 香港01 ➤ 高速 ➤ x1 = vmess, 13.70.41.84, 80, username=3ddf3b85-e7c3-3940-9bff-c31d26066d9b, ws=true, ws-path=/TS/recharge/tzUrl.html, sni=mp.weixin.qq.com, ws-headers=Host:"mp.weixin.qq.com", skip-cert-verify=true, tfo=true
+🇭🇰 香港1 ➤ 独享 ➤ x1 = vmess, 13.94.57.124, 80, username=3ddf3b85-e7c3-3940-9bff-c31d26066d9b, ws=true, ws-path=/TS/recharge/tzUrl.html, sni=mp.weixin.qq.com, ws-headers=Host:"mp.weixin.qq.com", skip-cert-verify=true, tfo=true
+🇭🇰 香港2 ➤ 独享 ➤ x1 = vmess, 13.75.75.251, 80, username=3ddf3b85-e7c3-3940-9bff-c31d26066d9b, ws=true, ws-path=/, sni=mp.weixin.qq.com, ws-headers=Host:"mp.weixin.qq.com", skip-cert-verify=0, tfo=true, udp-relay=false
+🇭🇰 香港3 ➤ 独享 ➤ x1 = vmess, 13.75.126.24, 80, username=3ddf3b85-e7c3-3940-9bff-c31d26066d9b, ws=true, ws-path=/, sni=mp.weixin.qq.com, ws-headers=Host:"mp.weixin.qq.com", skip-cert-verify=0, tfo=true, udp-relay=false
+🇭🇰 香港 ➤ 三网优化专线 ➤ x1 = vmess, 52.184.29.204, 80, username=3ddf3b85-e7c3-3940-9bff-c31d26066d9b, ws=true, ws-path=/, sni=pull.free.video.10010.com, ws-headers=Host:"pull.free.video.10010.com", skip-cert-verify=true, tfo=true
+🇭🇰 香港 Z-03 x1.0 = vmess, global.sggov.sands1.cucutube.com, 9162, username=5adc50f6-a3ba-494c-bd58-cfa83bf23268, ws=true, ws-path=/cctv13/hd.m3u8, sni=mp.weixin.qq.com, ws-headers=Host:"mp.weixin.qq.com", skip-cert-verify=true, tfo=true
