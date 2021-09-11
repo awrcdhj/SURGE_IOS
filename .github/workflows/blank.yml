@@ -1,36 +1,55 @@
-# This is a basic workflow to help you get started with Actions
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: '0 0,12 * * *'
 
-name: iOS
+name: Test react@next
 
-# Controls when the workflow will run
-on: 
-  # Triggers the workflow on push or pull request events but only for the Surge4 branch
-  push:
-    branches: [ GCDWebServer ]
-  pull_request:
-    branches: [ GCDWebServer ]
+jobs:
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:[yes]
+  #     - run: yarn install --frozen-lockfile --check-files
+  #       env:
+  #         NEXT_TELEMETRY_DISABLED: 1
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:[ GCDWebServer ]
-  # This workflow contains a single job called "build"
-  build:[ GCDWebServer ]
-    # The type of runner that the job will run on
+  #     - run: yarn upgrade react@next react-dom@next -W --dev
+
+  #     - uses: actions/cache@v2
+  #       id: cache-build
+  #       with:
+  #         path: ./*
+  #         key: ${{ github.sha }}
+
+  testAll:
+    name: Test All
     runs-on: ubuntu-latest
+    # needs: build
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
+      HEADLESS: true
+      NEXT_PRIVATE_SKIP_SIZE_TESTS: true
+      NEXT_PRIVATE_REACT_ROOT: 1
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [1, 2, 3, 4, 5, 6]
+    steps:
+      # - uses: actions/cache@v2
+      #   id: restore-build
+      #   with:
+      #     path: ./*
+      #     key: ${{ github.sha }}
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:[ GCDWebServer ]
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: {Surge4}
+      - run: yarn install --frozen-lockfile --check-files
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: {Surge4}
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - run: yarn upgrade react@next react-dom@next -W --dev
+
+      # TODO: remove after we fix watchpack watching too much
+      - run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+      - run: node run-tests.js --timings -g ${{ matrix.group }}/6 -c 3
