@@ -1,20 +1,10 @@
 #*********************************************************
-# Copyright (c), Neko Dev Team & neoHosts Team.
-# https://github.com/neofelhz/neohosts
-#
-# This work is licensed under a MIT License.
-# https://github.com/neofelhz/neohosts/blob/data/LICENSE
-#
-#*********************************************************
 # Localhost (DO NOT REMOVE) Start
 127.0.0.1 localhost
 ::1 localhost
 ::1 ip6-localhost
 ::1 ip6-loopback
 # Localhost (DO NOT REMOVE) End
-#*********************************************************
-#url=https://github.com/neofelhz/neohosts
-#version=20200312022058
 #*********************************************************
 
 127.0.0.1 0.r.msn.com
