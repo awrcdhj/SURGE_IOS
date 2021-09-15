@@ -16,7 +16,7 @@ ip6-localhost = ::1
 ip6-loopback = ::1
 # Localhost (DO NOT REMOVE) End
 
-# Amazon AWS Start
+# localhost:6171 Start
 aws.amazon.com = 54.239.31.69
 console.aws.amazon.com = 54.239.30.25
 ap-northeast-1.console.aws.amazon.com = 54.239.96.90
