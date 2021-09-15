@@ -1,13 +1,14 @@
+@@ -1,14 +1,14 @@
 [Host]
 
+# Modified Hosts Start
+
 # Copyright (c) 2014-2017, racaljk.
-# https://github.com/awrcdhj/SURGE_IOS
-# Last updated: 2017-08-05
+# https://github.com/awrcdhj/SURGE_IOS/Surge.Host.sh
+# Last updated: 2021-09-15
 
 # This work is licensed under a CC BY-NC-SA 4.0 International License.
 # https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-# Modified Hosts Start
 
 # Localhost (DO NOT REMOVE) Start
 localhost = 127.0.0.1
