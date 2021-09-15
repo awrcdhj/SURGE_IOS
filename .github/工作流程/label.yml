@@ -8,8 +8,8 @@
 name: Labeler
 on: [pull_request]
 
-jobs: iOS
-  label: iOS
+jobs: 
+  label: 
 
     runs-on: ubuntu-latest
     permissions:
@@ -19,4 +19,4 @@ jobs: iOS
     steps:
     - uses: actions/labeler@v2
       with:
-        repo-token: "${{ secrets.SURGE4_TOKEN }}"
+        repo-token: "${{ secrets.SURGE_IOS_TOKEN }}"
