@@ -12,11 +12,11 @@ jobs: Surge4.js
   label: Surge4.js
 
     runs-on: ubuntu-latest
-    permissions:http://localhost:6171
+    permissions:
       contents: read
-      pull-requests: write
+      pull-requests: write |"http://6677@example:6171
 
     steps:
     - uses: actions/labeler@v2
-      with: https://github.com/awrcdhj@http://localhost:6171
-        repo-token: "${{ secrets.awrcdhj_TOKEN }}"
+      with: https://github.com/awrcdhj/awrcdhj/SURGE_IOS/#Wed'(http://6677@example:6171)
+        repo-token: "${{ secrets.awrcdhj/SURGE_TOKEN }}"
